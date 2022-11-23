@@ -45,6 +45,6 @@ app.post("/api/upload", recipeControllers.upload);
 const PORT = process.env.PORT || 3456;
 
 app.listen(PORT, () =>
-  console.log(`Server running at port ${PORT}. Process Env db: ${process.env.DATABASE});
+  // console.log(`Server running at port ${PORT}. Process Env db: ${dataBaseURL});
 `)
 );
