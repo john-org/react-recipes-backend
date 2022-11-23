@@ -17,7 +17,7 @@ const dataBaseURL = process.env.DATABASE || "mongodb://localhost:27017";
 // const dataBaseURL = "mongodb://localhost:27017"; // use the local docker database
 // const dataBaseURL = "mongodb+srv://daniel:dd2345@cluster0.bs2la.mongodb.net/recipes?retryWrites=true&w=majority"; // use the hosted database
 
-// console.log("dataBaseURL::", dataBaseURL);
+console.log("dataBaseURL::", dataBaseURL);
 
 mongoose
   .connect(dataBaseURL, { useNewUrlParser: true })
@@ -45,6 +45,7 @@ app.post("/api/upload", recipeControllers.upload);
 const PORT = process.env.PORT || 3456;
 
 app.listen(PORT, () =>
-  // console.log(`Server running at port ${PORT}. Process Env db: ${dataBaseURL});
+  // console.log(`Server running at port ${PORT}. Process Env db: ${process.env.DATABASE});
+  console.log(`Server running at port ${PORT}. Database backend: ${dataBaseURL});
 `)
 );
