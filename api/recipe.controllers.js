@@ -34,7 +34,8 @@ exports.update = function (req, res) {
 exports.delete = function (req, res) {
   let id = req.params.id;
   Recipe.deleteOne({ _id: id }, () => {
-    return res.sendStatus(202);
+    // return res.sendStatus(202);
+    return {};
   });
 };
 
